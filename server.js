@@ -1,11 +1,13 @@
 
 var express = require('express');
 var app = express();
-app.use(express.static('assets'));
+app.use(express.static('assets')); // index.html is served from ./assets
 
-app.get('/', function (req, res) {
+/*
+app.get('/', function (req, res) { // index.html can be served from ./
   res.sendFile('/index.html');
 });
+*/
 
 app.get('/userform', function (req, res) {
   const response = {
