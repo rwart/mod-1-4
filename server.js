@@ -3,13 +3,12 @@ var express = require('express');
 var app = express();
 
 /*
-app.get('/', function (req, res) { // index.html can be served from ./ as default entry
+function getIndex(req, res) {
   res.sendFile('/index.html', { root: __dirname });
-});
+}
 
-app.get('/index.html', function (req, res) { // index.html can be served from ./
-  res.sendFile('/index.html', { root: __dirname });
-});
+app.get('/', getIndex); // index.html can be served from ./ as default entry
+app.get('/index.html', getIndex); // index.html can be served from ./
 */
 
 app.use(express.static('assets')); // index.html and default entry can served from ./assets
